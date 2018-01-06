@@ -2,14 +2,10 @@ FROM redmine:latest
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
                 gcc \
-                libmagickcore-dev \
-                libmagickwand-dev \
-                libmysqlclient-dev \
-                libpq-dev \
-                libsqlite3-dev \
                 make \
                 patch \
-        && rm -rf /var/lib/apt/lists/*
+                vim \
+                less \
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
